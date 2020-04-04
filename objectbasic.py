@@ -1,5 +1,84 @@
 class Student:
 
+    # first_name, last_name, subject, enrolled
+    def __init__(self, first_name, last_name, subject, enrolled):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.subject = subject
+        self.enrolled = enrolled
+    
+    # string representation of an object
+    def __str__(self):
+        return self.first_name.title() + " " + self.last_name.title()
+
+    def enroll(self):
+        if self.enrolled == True:
+            print('You are already enrolled')
+        else:
+            self.enrolled = True
+            print('You are now enrolled')
+
+# create an object of type student
+john = Student(first_name='john', last_name='doe', subject='Computer Science', enrolled=False)
+budi = Student(first_name='Budi', last_name= 'Smith', subject='Math', enrolled=True)
+
+print(john)
+print(budi)
+
+print(john.enrolled)
+john.enroll()
+print(john.enrolled)
+
+budi.enroll()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+class Student:
+
     # initialization of the object
     def __init__(self, first_name, last_name, hobbies, subject, enrolled):
         self.first_name = first_name
@@ -28,4 +107,4 @@ print(budi)
 
 john.enroll()
 budi.enroll()
-
+'''
