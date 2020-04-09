@@ -1,1 +1,1 @@
-j
+print("   hello    ".strip())
