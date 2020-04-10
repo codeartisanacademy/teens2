@@ -1,37 +1,53 @@
 class Student:
-
-    # first_name, last_name, subject, enrolled
+     # first_name, last_name, subject, enrolled
     def __init__(self, first_name, last_name, subject, enrolled):
         self.first_name = first_name
         self.last_name = last_name
         self.subject = subject
         self.enrolled = enrolled
     
-    # string representation of an object
+    # __str__() represents the object as a string
     def __str__(self):
-        return self.first_name.title() + " " + self.last_name.title()
+        return self.first_name + " " + self.last_name
 
     def enroll(self):
-        if self.enrolled == True:
-            print('You are already enrolled')
+        if self.enrolled:
+            print('sudah terdaftar')
         else:
             self.enrolled = True
-            print('You are now enrolled')
+            print('baru saja terdaftar')
 
-# create an object of type student
-john = Student(first_name='john', last_name='doe', subject='Computer Science', enrolled=False)
-budi = Student(first_name='Budi', last_name= 'Smith', subject='Math', enrolled=True)
+john = Student(first_name='John', last_name='Doe', subject='Politik', enrolled=True)
+mike = Student(first_name='Mike', last_name='Smith', subject='Kedokteran', enrolled=False)
 
 print(john)
-print(budi)
 
-print(john.enrolled)
+print(john.first_name + " " + john.last_name)
+
 john.enroll()
-print(john.enrolled)
-
-budi.enroll()
+mike.enroll()
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+    
+ 
 
 
 

@@ -1,21 +1,23 @@
-# create a function
+class Student:
+     # first_name, last_name, subject, enrolled
+    def __init__(self, first_name, last_name, subject, enrolled):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.subject = subject
+        self.enrolled = enrolled
+    
+    # __str__() represents the object as a string
+    def __str__(self):
+        return self.first_name + " " + self.last_name
 
-# this is a function that do something without a parameter
-def greet():
-    print('hello')
+    def enroll(self):
+        if self.enrolled:
+            print('sudah terdaftar')
+        else:
+            self.enrolled = True
+            print('baru saja terdaftar')
 
-# this is a function that do something with a parameter / argument
-def greet_name(name):
-    print('hello {0}'.format(name.title()))
+john = Student(first_name='John', last_name='Doe', subject='Politik', enrolled=True)
+mike = Student(first_name='Mike', last_name='Smith', subject='Kedokteran', enrolled=False)
 
-# this is a function that returns something 
-def addition(x, y):
-    result = x + y
-    return result
-
-greet()
-
-greet_name('jane')
-
-z = addition(3,6)
-print(z)
+print(john)

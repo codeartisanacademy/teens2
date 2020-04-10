@@ -29,3 +29,7 @@ for f in fruits:
     print("{0} has {1} characters".format(f, len(f)))
 
 print('xxxxxxxxxx')
+
+fruits.remove('orange')
+
+print(fruits)

@@ -18,6 +18,8 @@ indonesia['continent'] = 'Asia'
 
 print(indonesia)
 
+
+
 for k in indonesia.keys():
     print("the {0} is {1}".format(k, indonesia[k] ))
 
